@@ -1,0 +1,995 @@
+@media only screen and (max-width: 800px) {
+  /* Navigation bar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /* Slightly larger padding for better touch support */
+    height: 55px;
+    background-color: #1a1a2e;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    animation: load 1s ease-in-out;
+  }
+  .list {
+    display: none;
+  }
+
+  nav img {
+    display: block;
+  }
+
+  /* Website name/branding */
+  .name {
+    letter-spacing: 2px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  /* Unordered list for nav links */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* Ensure links are horizontally aligned */
+    gap: 10px;
+    /* Space between links */
+  }
+
+  ul li {
+    margin-left: 10px;
+    /* Reduced margin for smaller screens */
+    transition: all 0.2s ease-in-out;
+  }
+
+  ul li a {
+    font-size: 14px;
+    /* Slightly smaller font size for links */
+    text-decoration: none;
+    color: #b6e650;
+    transition: all 0.2s ease-in-out;
+  }
+
+  ul li a:hover {
+    text-decoration: underline;
+    border-radius: 25%;
+    transform: scale(1.1);
+  }
+
+  /* Logo/branding text in nav */
+  nav p {
+    font-size: 24px;
+    /* Smaller font for branding text */
+    font-weight: bolder;
+  }
+
+  /* Button styles */
+  .btn {
+    font-size: 14px;
+    /* Reduce font size for mobile */
+    width: 90px;
+    /* Slightly smaller width */
+    height: 30px;
+    /* Increased height for better touch support */
+    padding: 6px;
+    /* More padding for touch devices */
+    border-radius: 25px;
+    border: 2.5px solid #b6e650;
+    background-color: transparent;
+    color: #b6e650;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: none;
+  }
+
+  .btn:hover {
+    background-color: #b6e650;
+    color: #141426;
+    transform: scale(1.09);
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically on smaller screens */
+    justify-content: center;
+    /* Center align items */
+    align-items: center;
+    /* Center align items */
+    height: auto;
+    /* Full height minus the navbar */
+    padding: 20px;
+  }
+
+  .info {
+    width: 90%;
+    /* Make it responsive by using percentage */
+    max-width: 600px;
+    /* Limit the max width for larger screens */
+    padding: 20px;
+    /* border: 2px dotted #b6e650; */
+    /* border-radius: 32px 64px; */
+  }
+
+  .info h1,
+  .info p {
+    margin: 2px 0;
+    /* Remove negative margin */
+    font-size: 9px;
+  }
+  .info h2{
+    margin: 2px 0;
+    font-size: 13px;
+  }
+
+  .txt {
+    display: inline-block;
+  }
+
+  .txt h1 {
+    font-size: 19px;
+    /* Adjust font size for mobile */
+    overflow: hidden;
+    border-right: solid 0.5px #b6e650;
+    white-space: nowrap;
+    animation: typing 4s steps(40, end) 1;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+
+  .imge img {
+    width: 93%;
+    /* Make image responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+    max-height: 25rem;
+    /* Limit the max height */
+    border-radius: 50%;
+    margin-right: 25px;
+    margin-bottom: 7%;
+    border: 5px groove #b6e650;
+    box-shadow: 0 0 10px #b6e650;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .imge img:hover {
+    box-shadow: 0 0 20px #b6e650;
+  }
+
+  .exp {
+    width: 100%;
+    /* Full width for better alignment */
+    max-width: 81px;
+    /* Limit max width */
+    height: 26px;
+    margin: 10% auto;
+    /* Centering the element */
+    padding: 0 5px;
+    /* Horizontal padding */
+    text-align: center;
+    cursor: pointer;
+    border: solid 1px #b6e650;
+    border-radius: 0%;
+    /* Can adjust if needed */
+    transition: all 0.2s ease-in-out;
+    animation: fadeInOut 1s infinite;
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .exp p {
+    text-align: center;
+    margin-bottom: 10%;
+    margin-top: 8%;
+  }
+
+  .lst {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 10% 0;
+    /* Adjust margins for better spacing */
+  }
+
+  footer {
+    height: auto;
+    /* Allow height to adjust based on content */
+    background-color: #1a1a2e;
+    border-top: 1px solid #b6e650;
+    padding: 20px;
+    /* Add some padding for spacing */
+  }
+
+  .contact-info h3 {
+    text-align: center;
+    /* Center the heading for better alignment */
+    margin: 10px 0;
+    font-size: 19px;
+    /* Reduce margin */
+  }
+  .contact-info p{
+    font-size: 15px;
+  }
+
+  #email,
+  #Phone {
+
+    display: none;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center align items */
+  }
+
+  .social-media h3 {
+    margin-left: 0%;
+    text-align: center;
+    /* Center the heading */
+    display: none;
+  }
+
+  .social-media li {
+    margin-left: 0%;
+    display: inline-block;
+    /* Allow for better spacing between items */
+    margin: 0 10px;
+    /* Space between social icons */
+  }
+
+  .social-media a {
+    text-decoration: none;
+    color: #b6e650;
+    font-size: 20px;
+    /* Consistent icon size */
+  }
+
+  .social-media a:hover {
+    transform: scale(1.1);
+    /* Scale effect on hover */
+  }
+
+  .quick-links a {
+    text-decoration: none;
+    color: #b6e650;
+    display: inline-block;
+    position: relative;
+    margin-right: 15px;
+    padding-bottom: 5px;
+  }
+
+  .quick-links a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #b6e650;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+
+  .quick-links a:hover::after {
+    width: 100%;
+  }
+
+  .quick-links a:last-child {
+    margin-right: 0;
+  }
+
+  .quick-links h3 {
+    font-size: 9px;
+    margin-left: 0%;
+    text-align: center;
+    /* Center the heading */
+  }
+
+  .newsletter h3 {
+    margin-left: 0%;
+    text-align: center;
+    /* Center the heading */
+  }
+
+  .newsletter p {
+    margin-left: 0%;
+    text-align: center;
+    /* Center the paragraph */
+  }
+
+  .newsletter input[type="email"] {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 12px;
+    width: calc(100% - 20px);
+    /* Full width minus padding */
+    max-width: 300px;
+    /* Limit max width */
+    margin: 10px 0;
+    /* Add margin for spacing */
+  }
+
+  .newsletter button {
+    padding: 10px 20px;
+    border: 2.5px solid #b6e650;
+    border-radius: 25px;
+    background-color: transparent;
+    color: #b6e650;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 2%;
+    margin-top: 10px;
+    /* Space above the button */
+  }
+
+  .newsletter button:hover {
+    background-color: #b6e650;
+    color: #141426;
+    transform: scale(1.05);
+  }
+
+  .footer-bottom {
+    text-align: center;
+    color: #b6e650;
+    margin-top: 10%;
+  }
+
+  .footer-bottom p{
+    font-size: 10px;
+    margin-left: auto;
+  }
+
+  article {
+    flex-direction: column;
+    /* Stack elements vertically */
+    height: auto;
+    /* Adjust height for better spacing */
+  }
+
+  .bkimg {
+    margin-bottom: 20px;
+    /* Space below the image */
+  }
+
+  .bkimg img {
+    height: 10rem;
+    /* Reduce image size for smaller screens */
+  }
+
+  .art-content {
+    max-width: 100%;
+    /* Allow text to use full width */
+    margin-left: 0;
+    /* Remove left margin */
+    margin-right: 0;
+    /* Remove right margin */
+    text-align: center;
+    /* Center text for better readability */
+  }
+
+  .art-content h2 {
+    font-size: 19px;
+    /* Adjust font size for smaller screens */
+  }
+
+  .art-content p {
+    font-size: 9px;
+    /* Adjust font size for better readability */
+  }
+
+  .hire {
+    width: 16%;
+    height: auto;
+    /* Use more width for buttons on smaller screens */
+    margin: 0 auto;
+    /* Center the button */
+  }
+
+  .hire h5 {
+    font-size: 9px;
+    /* Reduce font size for smaller screens */
+    margin-left: 0;
+    /* Remove left margin */
+    margin-top: 1px;
+    /* Space above the button */
+  }
+
+  .figure {
+    height: auto;
+    /* Adjust height for better spacing on smaller screens */
+    padding: 20px;
+    /* Add padding for better layout */
+  }
+
+  .art-cont img {
+    height: 10rem;
+    /* Adjust image height for smaller screens */
+    width: auto;
+    /* Maintain aspect ratio */
+    margin-left: 22%;
+    /* Remove left margin */
+  }
+
+  .scale2 {
+    left: 0;
+    /* Center the title for better alignment */
+    font-size: 19px;
+    /* Adjust font size for smaller screens */
+    text-align: center;
+  }
+
+  .free {
+    position: relative;
+    z-index: 1;
+    left: 0%;
+    top: -31px;
+    width: 39%;
+    /* Adjust width for better fit */
+    font-size: 9px;
+    /* Adjust font size for smaller screens */
+    transform: skew(160deg, 0deg);
+  }
+
+  .div1 {
+    width: 100%;
+    /* Use full width on smaller screens */
+    margin-left: 0;
+    /* Remove left margin */
+  }
+
+  .headl {
+    font-size: 20px;
+    /* Adjust font size for headings */
+    margin-left: 0;
+    /* Center heading */
+    text-align: center;
+    /* Center heading */
+  }
+
+  .div1 h3 {
+    margin-left: 0;
+    /* Center text */
+    text-align: center;
+    /* Center heading */
+  }
+
+  .div1 p {
+    font-size: 9px;
+    line-height: 1.4;
+    width: 66%;
+    text-align: justify;
+  }
+
+  .div2 img {
+    margin-top: 10%;
+    height: 8rem;
+    width: fit-content;
+  }
+
+  .button {
+    flex-direction: flex;
+    /* Stack buttons vertically */
+    margin-left: 0;
+    /* Remove left margin */
+    gap: 0px;
+    /* Space between buttons */
+    width: 100%;
+    /* Use full width on smaller screens */
+  }
+
+  .pro {
+    width: 25%;
+    /* Full width for buttons */
+    text-align: center;
+    /* Center text inside buttons */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  .pro p{
+    font-size: 9px;
+  }
+  .meet {
+    width: 28%;
+    /* Full width for buttons */
+    text-align: center;
+    /* Center text inside buttons */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  .meet p{
+    font-size: 9px;
+  }
+
+  .fig {
+    height: auto;
+  }
+
+  .seti {
+    overflow-x: scroll;
+    /* Enable horizontal scrolling */
+    white-space: nowrap;
+    /* Prevent line breaks */
+    scrollbar-width: none;
+  }
+
+  .seti::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar in Chrome, Safari, and Opera */
+  }
+
+  .skill {
+    position: relative;
+    z-index: 3;
+    top: -3%;
+    left: 86%;
+    font-size: 18px;
+    background-color: #b6e650;
+    color: #141426;
+    padding: 1%;
+    width: 9%;
+    letter-spacing: 2px;
+    transform: skew(160deg, 2deg);
+    text-align: center;
+    margin-top: -2%;
+    height: auto;
+  }
+
+  .skill P{
+    font-size: 9px;
+  }
+  .set{
+    gap: 40px;
+  }
+
+  .set img {
+    height: 4rem;
+    display: inline-block;
+  }
+
+  .fig h3 {
+    font-size: 9px;
+    text-align: center;
+    margin-right: 31%;
+  }
+
+  .me {
+    height: auto;
+  }
+
+  .am {
+    position: relative;
+    z-index: 1;
+    left: 7%;
+    font-size: 18px;
+    background-color: #b6e650;
+    color: #141426;
+    padding: 1%;
+    width: 9%;
+    letter-spacing: 2px;
+    transform: skew(160deg, 2deg);
+    text-align: center;
+    margin-top: -4%;
+  }
+  .am p{
+    font-size: 9px;
+  }
+
+  .one {
+    font-size: 10px;
+  }
+
+  .me img {
+    height: 4rem;
+  }
+
+  #l1 {
+    font-size: 10px;
+    margin-top: 3%;
+    margin-left: 1.5%;
+    color: #7b9c35;
+  }
+
+  #l2 {
+    color: #7b9c35;
+    font-size: 10px;
+    margin-top: 3%;
+    margin-left: 1.5%;
+  }
+
+  #l3 {
+    color: #7b9c35;
+    font-size: 10px;
+    margin-top: 3%;
+    margin-left: 1.5%;
+  }
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 20px;
+    /* Smaller heading size */
+  }
+
+  .sec2 {
+    margin-right: 5%;
+  }
+
+  .sec2 p {
+    line-height: 1.4;
+    /* Adjust line height for better readability */
+    text-align: justify;
+    width: 190;
+    font-size: 9px;
+  }
+
+  .bec {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bec1 {
+    margin-left: 11%;
+  }
+
+  .bec1 p {
+    text-align: justify;
+    width: 300%;
+    font-size: 9px;
+  }
+
+  .dec img {
+    height: 20rem;
+    /* Make image fill the container */
+  }
+
+  .jec {
+    padding: 8px;
+    /* Add padding for smaller screens */
+  }
+
+  .jec p {
+    width: 100%;
+    font-size: 12px;
+    /* Adjust font size */
+    line-height: 1.4;
+    /* Adjust line height for better readability */
+    text-align: justify;
+    /* Justify text for better alignment */
+  }
+
+  .gec {
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    padding: 10px;
+    /* Add padding for smaller screens */
+  }
+
+  .gec1,
+  .gec2 {
+    text-align: center;
+    /* Center-align text and images */
+  }
+
+  .gec2 {
+    margin-left: 2.1%;
+  }
+
+  .gec1 img {
+    max-width: 100%;
+    /* Make the image responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+  }
+
+  .gec2 p {
+    width: 190%;
+    font-size: 9px;
+    /* Adjust font size */
+    line-height: 1.4;
+    /* Adjust line height for better readability */
+    text-align: justify;
+  }
+
+  .cec {
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    padding: 10px;
+    /* Add padding for smaller screens */
+  }
+
+  .cec1 {
+    width: auto;
+  }
+
+  .cec1 p {
+    text-align: justify;
+    line-height: 1.4;
+    /* Adjust line height for better readability */
+    max-width: 120%;
+    font-size: 9px;
+  }
+
+  .cec2 {
+    display: flex;
+    /* Use flex to center the image */
+    justify-content: center;
+    /* Center the image */
+    margin: 10px 0;
+    /* Add margin for spacing */
+  }
+
+  .cec2 img {
+    max-width: 100%;
+    /* Make the image responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+  }
+
+  .aec {
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    padding: 10px;
+    /* Add padding for smaller screens */
+  }
+
+  .aec2 {
+    display: flex;
+    /* Use flex to center the image */
+    justify-content: center;
+    /* Center the image */
+    margin: 10px 0;
+    /* Add margin for spacing */
+  }
+
+  .aec2 img {
+    max-width: 100%;
+    /* Make the image responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+  }
+
+  .aec1 {
+    height: auto;
+    text-align: center;
+    margin: 10px 0;
+    width: 300;
+  }
+
+  .aec1 p {
+    text-align: justify;
+    line-height: 1.4;
+    /* Adjust line height for better readability */
+    font-size: 9px;
+    width: 300%;
+  }
+  .fec {
+    padding: 10px;
+  }
+
+  .fec1 h3 {
+    font-size: 18px; /* Reduce heading size for small screens */
+    display: none;
+  }
+
+  .fec1 li {
+    margin: 5px; /* Adjust spacing between icons */
+  }
+
+  .fec1 a {
+    font-size: 11px; /* Adjust icon size for small screens */
+  }
+
+  .aec1,
+  .cec1 {
+    width: 100%; /* Fill the parent container */
+    max-width: 100%; /* Prevent it from overflowing */
+  }
+  .cec1 {
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 800px) {
+  .projects {
+    padding: 20px;
+  }
+
+  .pro1 h1 {
+    font-size: 1.5rem; /* Adjust the heading size */
+    text-align: center; /* Center the title for smaller screens */
+  }
+
+  .pro2 p {
+    font-size: 14px; /* Adjust the paragraph size */
+    text-align: justify;
+    line-height: 1.6; /* Increase line height for better readability */
+  }
+
+  .project-div,
+  .additional-projects {
+    display: flex;
+    flex-direction: column; /* Stack the projects vertically */
+    align-items: center;
+  }
+
+  .pro3,
+  .pro4 {
+    width: 100%;
+    margin-bottom: 20px; /* Add spacing between projects */
+  }
+
+  .proi3 img,
+  .proi4 img {
+    width: 100%; /* Make the image responsive */
+    height: auto;
+  }
+
+  .proi3 h3,
+  .proi4 h3 {
+    font-size: 1.2rem; /* Adjust the project title size */
+    text-align: center;
+  }
+
+  .proi3 p,
+  .proi4 p {
+    font-size: 12px; /* Smaller font for the project description */
+    line-height: 1.4;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  #mail, #name{
+    width: auto;
+  }
+  #message{
+    width: auto;
+  }
+  
+}
+
+@media (max-width: 800px) {
+  .nav2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 104%;
+    height: 53vh;
+    background-color: rgba(20, 20, 38, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+  }
+
+
+  
+  /* Close button styling */
+  .nav2 img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Styling for the ul (nav list) */
+  .nav2 .cnt ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Ensures list items stay in column */
+    align-items: center;
+    text-align: center;
+  }
+  
+  .nav2 .cnt ul li {
+    margin: 5px 0;
+  }
+  
+  .nav2 .cnt ul li a {
+    font-size: 9px;
+    color: #b6e650;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav2 .cnt ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styling for the Resume button */
+  .nav2 .cnt .btn1 {
+    width: 50px;
+    font-size: 9px;
+    height: 20px;
+    padding: 0px;
+    border-radius: 25px;
+    border: 2.5px solid #b6e650;
+    background-color: transparent;
+    color: #b6e650;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+  }
+
+  .nav2 .btn1{
+    margin-top: 17px;
+  }
+  
+  .nav2 .cnt .btn1:hover {
+    background-color: #b6e650;
+    color: #141426;
+    transform: scale(1.1);
+  }
+  
+  /* Centering the .cnt content */
+  .nav2 .cnt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Adding animation for smooth fade-in when active */
+  .nav2.active .cnt {
+    animation: fadeIn 0.6s ease;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Media query to handle max-width 800px */
+  @media (max-width: 800px) {
+    .nav2 .cnt ul {
+      flex-direction: column; /* Force column layout at max-width 800px */
+    }
+  }
+  
+  
+}

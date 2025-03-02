@@ -1,0 +1,41 @@
+Virtual networking model
+Personal assistant tars
+weather app
+web scrapping
+e-commerce store
+portfolio web
+language translator
+
+
+
+.nav2 {
+  width: 100%;
+}
+
+.opt ul li{
+  display: flex;
+  flex-direction: column;
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+}
+
+.opt  img {
+  height: 2rem;
+  width: auto;
+  float: right;
+}
+
+ <div class="nav2">
+           <div class="opt">
+            <img data-aos="slide-right" src="imges/close_btn.png" alt="">
+            <ul>
+                <li><a href="#" data-aos="fade-up">Home</a></li>
+                <li><a href="#" data-aos="fade-up">About me</a></li>
+                <li><a href="#" data-aos="fade-up">Projects</a></li>
+                <li><a href="#" data-aos="fade-up">Contact us</a></li>
+            </ul>
+           </div>
+        </div>
+
+
+        <img data-aos="slide-right" src="imges/menu_btn.png" alt="">
