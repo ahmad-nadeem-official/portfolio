@@ -1,0 +1,187 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background-color: #141426; /* Matches your portfolio theme */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Shimmer Effect */
+@keyframes shimmer {
+    0% { background-position: -200px 0; }
+    100% { background-position: 200px 0; }
+}
+
+.shimmer {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 75%);
+    background-size: 400px 100%;
+    animation: shimmer 1.5s infinite linear;
+    border-radius: 5px;
+}
+
+/* Navbar Skeleton */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #1a1a2e;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.logo-placeholder {
+    width: 120px;
+    height: 25px;
+    border: 4px solid #b6e650;
+    box-shadow: 0px 0px 15px #b6e650;
+}
+
+.nav-items {
+    display: flex;
+    gap: 20px;    
+    
+}
+
+.nav-item {
+    width: 80px;
+    height: 20px;
+    border: 4px solid #b6e650;
+    box-shadow: 0px 0px 15px #b6e650;
+}
+
+.btn-placeholder {
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    border: 4px solid #b6e650;
+    box-shadow: 0px 0px 15px #b6e650;
+}
+
+/* Main Content Skeleton */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    height: 100vh;
+    padding-top: 80px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Left Side Skeleton */
+.left-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title-placeholder {
+    width: 100px;
+    height: 30px;
+    border: 4px solid #b6e650;
+    box-shadow: 0px 0px 15px #b6e650;
+}
+
+.subtitle-placeholder {
+    width: 475px;
+    height: 25px;
+    border: 4px solid #b6e650;
+    box-shadow: 0px 0px 15px #b6e650;
+}
+
+.description-placeholder {
+    width: 400px;
+    height: 100px;
+    margin-top: 10px;
+    border: 4px solid #b6e650;
+    box-shadow: 0px 0px 15px #b6e650;
+}
+
+.button-placeholder {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: 4px solid #b6e650;
+    box-shadow: 0px 0px 15px #b6e650;
+}
+
+/* Right Side Skeleton (Profile Image) */
+.right-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-placeholder {
+    width: 416px;
+    height: 26rem;
+    border-radius: 50%;
+    border: 4px solid #b6e650;
+    box-shadow: 0px 0px 15px #b6e650;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 800px) {
+    .logo-placeholder{
+        width: 165px;
+        margin-left: 25%;
+    }
+
+    btn-placeholder{
+        width: 165px;
+        background-color: red;
+        margin-right: 25%;
+    }
+    .subtitle-placeholder{
+        width: 220%;
+    }
+    .description-placeholder{
+        width: 221%;
+    }
+    .navbar{
+        width: auto;
+        padding: 10px 20px;
+    }
+    .left-content{
+        padding: 9%;
+        padding-left: 9%;
+        padding-right: 9%;
+    }
+
+    .title-placeholder{
+        margin-left: -150%;
+    }
+
+
+    .nav-items{
+        visibility: hidden;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-content {
+        align-items: center;
+    }
+
+    .profile-placeholder {
+        width: 201px;
+        height: 180px;
+    }
+}

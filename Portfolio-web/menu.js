@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Check if elements exist before adding event listeners
     if (menu && nav && clos) {
         function show1() {
-            nav.style.visibility = 'visible';
+            nav.style.transform= "translateY(0%)";
         }
 
         function hide1() {
-            nav.style.visibility = 'hidden';
+            nav.style.transform= "translateY(-100%)";
         }
 
         clos.addEventListener('click', hide1);
@@ -20,3 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("One or more elements (.menu, .nav2, .cls) not found in the DOM");
     }
 });
+  
+
+
+
+  

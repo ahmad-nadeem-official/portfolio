@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Gupter:wght@400;500;700&family=Kalnia+Glaze:wght@100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Gupter:wght@400;500;700&family=Kalnia+Glaze:wght@100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
+  user-select: none;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -9,7 +10,6 @@ body {
   background-color: #141426;
   color: #b6e650;
 }
-
 body,
 html {
   overflow-x: hidden;
@@ -578,41 +578,50 @@ article {
 }
 
 .set {
+  font-size: 15px;
+  padding-block: 8px;
+  overflow: hidden;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5%;
-  padding: 40px;
-  margin: auto;
-  gap: 175px;
+  width: 100%;
   position: relative;
-  overflow-x: scroll;
-  animation: scrollAnimation 5s linear infinite;
 }
 
+.set ul {
+  list-style: none;
+  display: flex;
+  flex-shrink: 0;
+  user-select: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-width: 100%;
+  animation: scrollAnimation 20s linear infinite;
+}
+
+/* FIXED: Infinite Loop Animation */
 @keyframes scrollAnimation {
-  0% {
-    transform: translateX(100);
+  from {
+    transform: translateX(0);
   }
-  100% {
+  to {
     transform: translateX(-100%);
   }
 }
 
-.set img {
-  height: 6rem; 
-  flex-shrink: 0; 
-  margin-right: 20px;
-  /* height: 6rem; */
+/* Ensure images are aligned properly */
+.set li img {
+  height: 5rem;
 }
 
-.set ::-webkit-scrollbar {
-  display: none; /* Hides the scrollbar in Webkit browsers (Chrome, Safari, etc.) */
+/* Hide Scrollbars */
+.set::-webkit-scrollbar {
+  display: none;
 }
 
 .set {
-  scrollbar-width: none; /* Hides the scrollbar in Firefox */
+  scrollbar-width: none;
 }
+
 
 .fig h3 {
   align-content: center;
@@ -626,11 +635,15 @@ article {
   height: auto;
   border-top: solid 1px #b6e650;
 }
+
+.on {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .am {
-  position: relative;
   z-index: 1;
-  top: -5%;
-  left: 5%;
   font-size: 20px;
   background-color: #b6e650;
   color: #141426;
@@ -642,57 +655,65 @@ article {
 }
 
 .one {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-#one {
-  display: flex;
-  text-align: center;
-}
-
-#two {
-  display: flex;
-
-  /* margin-right: 43%; */
-  text-align: center;
-}
-
-.one a {
-  text-decoration: none;
-  color: aliceblue;
-  margin-top: 2.5%;
-}
-
-#l1 {
-  font-size: 15px;
-  margin-top: 1.5%;
-  margin-left: 1.5%;
-  color: #7b9c35;
-}
-
-#l2 {
-  color: #7b9c35;
-  font-size: 15px;
-  margin-top: 1.5%;
-  margin-left: 1.5%;
-}
-#l3 {
-  color: #7b9c35;
-  font-size: 15px;
-  margin-top: 1.5%;
-  margin-left: 1.5%;
-}
-
-.me img {
-  height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 43%;
-  margin-top: 2%;
+  cursor: pointer;
+  text-align: center;
 }
+
+.txt1 {
+  line-height: 1.4;
+  margin-left: 28%;
+  text-align: justify;
+  width: 50%;
+  font-size: 13px;
+}
+
+/* FAQ Sections - Collapsed by Default */
+.faq1 {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-out, padding 0.4s ease-out;
+  padding: 0;
+}
+
+.faq1.visible {
+  max-height: 100%;
+  padding: 10px;
+}
+
+.faq2 {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-out, padding 0.4s ease-out;
+  padding: 0;
+}
+
+.faq2.visible {
+  max-height: 100%;
+  padding: 10px;
+}
+
+.faq3 {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-out, padding 0.4s ease-out;
+  padding: 0;
+}
+
+.faq3.visible {
+  max-height: 100%;
+  padding: 10px;
+}
+
+
+.me img {
+  height: 10rem;
+  display: block;
+  margin: 2% auto;
+}
+
 
 .sec {
   display: flex;
@@ -1193,6 +1214,11 @@ form {
   100% {
     transform: translateX(-100%);
   }
+}
+
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 
