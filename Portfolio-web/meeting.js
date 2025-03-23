@@ -15,6 +15,7 @@ met.addEventListener('click', show)
 
 
 
+
 // document.addEventListener('DOMContentLoaded', () => {
 //     const marquee = document.getElementById('marquee');
 //     const marqueeText = document.getElementById('marqueeText');

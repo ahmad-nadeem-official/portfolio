@@ -14,6 +14,10 @@ body,
 html {
   overflow-x: hidden;
 }
+.hidden {
+  opacity: 0;
+  transform: translateY(50px); /* Moves elements slightly down */
+}
 
 nav {
   display: flex;
@@ -839,15 +843,21 @@ article {
 }
 
 .fec1 {
+  margin: auto;
   display: flex;
   justify-content: center;
   justify-items: center;
+  gap: 2%;
 }
 
 .fec1 h3 {
   font-size: 40px;
   margin-left: 18%;
   letter-spacing: 0.3px;
+}
+
+.fec ul{
+  margin-top: 50px;
 }
 
 .fec1 li {
@@ -884,6 +894,18 @@ article {
   gap: 20px; /* Adjust this to change spacing between items */
   flex-wrap: wrap; /* Allows wrapping if items exceed container width */
   justify-content: center; /* Center items horizontally */
+}
+
+.project-div a{
+  text-decoration: none;
+  color: #b6e650; /* Neon Cyan */
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #00f, 0 0 40px #00f;
+}
+
+.additional-projects a{
+  text-decoration: none;
+  color: #b6e650; /* Neon Cyan */
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #00f, 0 0 40px #00f;
 }
 
 .pro3,

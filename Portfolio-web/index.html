@@ -9,7 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     <link rel="icon" href="imges/prof.jpg" type="image/jpg">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
     <link rel="stylesheet" href="responsive.css">
     <!-- <link rel="stylesheet" href="skelton.css"> -->
     <link rel="stylesheet"
@@ -22,7 +22,7 @@
 </head>
 
 <body>
-        <nav>
+        <nav class="navi">
             <p class="name" data-aos="slide-down">MAN</p>
             <div class="list" data-aos="slide-down">
                 <ul>
@@ -51,54 +51,53 @@
         </div>
         <section id="boxx">
             <div class="info">
-                <h2 data-aos="slide-right">Hello, It's me</h2>
+                <h2>Hello, It's me</h2>
                 <div class="txt">
-                    <h1 data-aos="slide-right">Muhammad Ahmad Nadeem </h1>
+                    <h1>Muhammad Ahmad Nadeem</h1>
                 </div>
-                <p data-aos="slide-right">Bringing Imagination to Life Through Code. A passionate programmer speciality
-                    in Python | Data
-                    science | Full stack development.</p>
-                <p class="lst" data-aos="slide-right">LET MY WORK, INTRODUCE MYSELF TO YOU !</p>
-                <div class="exp" data-aos="slide-up">
-                    <p><a href="projects.html">Explore my work !</a></p>
+                <p>Bringing Imagination to Life Through Code. A passionate programmer specializing in Python | Data
+                    Science | Full Stack Development.</p>
+                <p class="lst">LET MY WORK INTRODUCE MYSELF TO YOU!</p>
+                <div class="exp">
+                    <p><a href="projects.html">Explore my work!</a></p>
                 </div>
-
             </div>
             <div class="imge">
-                <img data-aos="slide-left" src="imges/image1.jpg" alt="Ahmad's Image">
+                <img src="imges/image1.jpg" alt="Ahmad's Image">
             </div>
         </section>
+        
         <article id="boxx">
             <div class="bkimg">
-                <img data-aos="slide-right" src="imges/boy.png.png" alt="">
+                <img src="imges/boy.png.png" alt="">
             </div>
-            <div class="art-content" data-aos="slide-left">
+            <div class="art-content">
                 <div class="text1">
                     <h2>Simplyfing the complexity</h2>
                 </div>
-                <div class="text2" data-aos="slide-left">
+                <div class="text2">
                     <p>My career as a software engineer has been dedicated to exploring and solving the intricate
                         problems presented by real-world scenarios, turning complex challenges into opportunities for
                         innovation.</p>
                 </div>
-                <div class="hire" data-aos="fade-left">
+                <div class="hire">
                     <a href="contact.html">
                         <h5>HIRE ME !</h5>
                     </a>
                 </div>
-
             </div>
         </article>
+        
         <div class="figure" id="boxx">
             <div class="free">Freelance services</div>
-            <div class="scale2" data-aos="slide-left">Enhance your business with our services.</div>
+            <div class="scale2">Enhance your business with our services.</div>
             <div class="art-cont">
-                <div class="scale"><img data-aos="slide-right" src="imges/graph.png" alt=""></div>
+                <div class="scale"><img src="imges/graph.png" alt=""></div>
             </div>
-            <p class="headl" data-aos="slide-left">Headlines of our services</p>
+            <p class="headl">Headlines of our services</p>
             <div class="di3">
                 <div class="div1">
-                    <div class="headlines" data-aos="slide-right">
+                    <div class="headlines">
                         <p>Our data science services transform complex data into actionable insights. We excel in data
                             analysis and visualization, predictive modeling, and data preparation. By employing advanced
                             tools like Python, R, and Tableau, we create models to forecast trends and ensure data
@@ -106,7 +105,7 @@
                             business growth through data-driven insights.</p>
                         <img src="imges/datascience.png" alt="">
                     </div>
-                    <div class="headlines" data-aos="slide-left">
+                    <div class="headlines">
                         <p>We offer comprehensive full stack development, covering both frontend and backend needs. Our
                             frontend expertise includes HTML, CSS, JavaScript, and React, while our backend solutions
                             involve Node.js, Python, and SQL databases. We manage the entire development process, from
@@ -114,14 +113,14 @@
                             to your business requirements</p>
                         <img src="imges/fullstack.png" alt="">
                     </div>
-                    <div class="headlines" data-aos="slide-right">
+                    <div class="headlines">
                         <p>Our digital marketing services focus on Meta ads to boost your online presence. We design and
                             manage targeted ad campaigns, optimize ad performance, and employ precise audience
                             targeting. By leveraging Meta Ads Manager, we create strategies that drive engagement and
                             deliver measurable results, helping you achieve your marketing goals effectively.</p>
                         <img src="imges/digitalmarketing.png" alt="">
                     </div>
-                    <div class="headlines" data-aos="slide-left">
+                    <div class="headlines">
                         <p>Enhance your online visibility with our SEO services. We specialize in on-page and off-page
                             SEO, technical optimizations, and content strategies to improve search rankings. Using tools
                             like Google Analytics and SEMrush, we provide data-driven insights and strategies that
@@ -168,6 +167,7 @@
                 </form>
             </div>
         </div>
+
         <div class="fig">
             <div class="skill">
                 <p>Skills</p>
@@ -302,12 +302,14 @@
                     <p>&copy; 2025 Muhammad Ahmad Nadeem. All rights reserved.</p>
                 </div>
             </footer>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
             AOS.init({
-                once: true
             });
-        </script>        
+        </script>         -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js" integrity="sha512-+LXqbM6YLduaaxq6kNcjMsQgZQUTdZp7FTaArWYFt1nxyFKlQSMdIF/WQ/VgsReERwRD8w/9H9cahFx25UDd+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="sap.js"></script>
         <script src="menu.js"></script>
         <script src="meeting.js"></script>
         <script src="faq.js"></script>
