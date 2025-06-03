@@ -1,6 +1,6 @@
-const b1 = document.querySelector(".b1");
-const b2 = document.querySelector(".b2");
-const b3 = document.querySelector(".b3");
+let b1 = document.querySelector(".b1");
+let b2 = document.querySelector(".b2");
+let b3 = document.querySelector(".b3");
 
 const faq1 = document.querySelector(".faq1");
 const faq2 = document.querySelector(".faq2");
