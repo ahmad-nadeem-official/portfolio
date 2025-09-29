@@ -13,6 +13,12 @@ function hide(){
 ic.addEventListener('click', hide)
 met.addEventListener('click', show)
 
+window.addEventListener('click', function(event){
+    if (!met1.contains(event.target) && event.target !== met) {
+        hide();
+    }
+})
+window.addEventListener('scroll', hide);
 
 
 

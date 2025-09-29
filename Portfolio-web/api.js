@@ -1,47 +1,87 @@
-// Get the form element
-const form = document.getElementById('newsletterForm');
-const emailInput = document.getElementById('emailInput');
+// for newsletter subscription
+const form = document.querySelector('.form');
+const emailInput = document.querySelector('#emailInput');
 
-// Add event listener to the form
-form.addEventListener('submit', sendEmail);
+form.addEventListener('submit', event => {
+  event.preventDefault(); // stop page refresh
 
-async function sendEmail(event) {
-  event.preventDefault(); // Prevent the form from refreshing the page
-
-  // Get the email value
   const email = emailInput.value.trim();
 
-  // Check if email is empty
-  if (!email) {
-    alert('Please enter your email!');
+  fetch('https://ahmadnadeem.vercel.app/subscribe', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ email })
+  })
+  .then(res => res.json())
+  .then(data => {
+    console.log(data);
+    emailInput.value = ''; // clear only after success
+    alert("subscribed sent successfully!");
+  })
+  .catch(error => console.error('Error:', error));
+});
+
+
+
+
+// For meeting request
+// meeting request form  
+document.addEventListener('DOMContentLoaded', () => {
+  const nameInput = document.querySelector('#name');
+  const emailInput = document.querySelector('#mail');
+  const timeInput = document.querySelector('#meeting-time');
+  const messageInput = document.querySelector('#message');
+
+  // Use one consistent name for the button variable!
+  const submitButton = document.querySelector('.form-group button[type="submit"]');
+
+  if (!submitButton) {
+    console.error('Submit button not found inside .meeti');
     return;
   }
 
-  // Show a loading message
-  alert('Subscribing... Please wait.');
+  submitButton.addEventListener('click', (e) => {
+    e.preventDefault();
 
-  try {
-    // Send POST request to your API
-    const response = await fetch('https://ahmadnadeem.vercel.app/subscribe', {
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const date = timeInput.value.trim();
+    const message = messageInput.value.trim();
+
+    const data = { name, email, date, message };
+
+    fetch('https://ahmadnadeem.vercel.app/meeting', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email: email }), // Send email as JSON
-    });
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: data.name,
+        email: data.email,
+        date: data.date,
+        message: data.message
+      })
+    })
+    .then(res => res.json())
+    .then(response => {
+      console.log('Meeting scheduled:', response);
+      nameInput.value = '';
+      emailInput.value = '';
+      timeInput.value = '';
+      messageInput.value = '';
+      alert('Meeting successfully scheduled!');
+      let met1 = document.querySelector(".meet01");
+      met1.style.visibility = 'hidden';
 
-    // Check if the response is successful
-    if (response.ok) {
-      alert('Subscribed successfully!');
-      emailInput.value = ''; // Clear the input field
-    } else {
-      // Get error message from API if available
-      const errorData = await response.json().catch(() => ({}));
-      alert(`Subscription failed: ${errorData.message || 'Please try again.'}`);
-    }
-  } catch (error) {
-    // Handle network or other errors
-    console.error('Error:', error);
-    alert('Something went wrong! Check your internet or try again later.');
-  }
-}
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Something went wrong while booking the meeting.');
+    });
+  });
+});
+
+
+
+
+

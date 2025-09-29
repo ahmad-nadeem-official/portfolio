@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (menu && nav && clos) {
         function show1() {
             nav.style.transform= "translateY(0%)";
-        }
+        }    
 
         function hide1() {
             nav.style.transform= "translateY(-100%)";
@@ -16,11 +16,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
         clos.addEventListener('click', hide1);
         menu.addEventListener('click', show1);
-    } else {
+
+       window.addEventListener('click', function(event){
+        if (!nav.contains(event.target) && event.target !== menu) {
+                hide1();
+            }
+       })
+       window.addEventListener('scroll', hide1);
+
+
+    }else {
         console.error("One or more elements (.menu, .nav2, .cls) not found in the DOM");
     }
 });
-  
+
+
 
 
 

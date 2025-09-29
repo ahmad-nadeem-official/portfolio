@@ -222,45 +222,64 @@ section {
 }
 
 footer {
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
   height: auto;
   background-color: #1a1a2e;
   border-top: 1px solid #b6e650;
 }
 
-.contact-info h3 {
-  margin-left: 33%;
+
+.contact-item {
+  display: flex;
+  align-items: center;  /* icon and text aligned vertically */
+  gap: 8px;             /* space between icon and text */
+  margin: 6px 0;        /* spacing between rows */
 }
 
-#email {
-  /* background-color: #b6e650; */
+.icon {
+  width: 18px;          /* icon size */
+  height: 18px;
   color: #b6e650;
-  border: 1px solid #b6e650;
-  /* border-radius: 25px; */
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
 }
 
-#Phone {
-  /* background-color: #b6e650; */
-  color: #b6e650;
-  border: 1px solid #b6e650;
-  /* border-radius: 25px; */
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
+/* link styling: inherit color, remove underline */
+.contact-link {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
-.footer-content {
+/* subtle hover */
+.contact-link:hover {
+  text-decoration: underline;
+  opacity: 0.95;
+}
+
+
+/* .footer-content {
   display: flex;
   justify-content: space-around;
   align-items: center;
+} */
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 40px;                             /* space between sections */
+    align-items: start;                    /* align everything to the top */
 }
+
 
 .social-media h3 {
   margin-left: 38%;
 }
 
+
 .social-media li {
-  display: inline;
+  display: inline-block;
+  margin-right: -5px;
 }
 
 .social-media a {
@@ -279,12 +298,20 @@ footer {
   transform: rotateY(180deg);
 }
 
+.quick-link{
+
+  margin-right: 20px;
+  align-items: center; /* Align items to the start (left) */
+  gap: 10px; /* Space between links */
+}
+
 .quick-links a {
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
   color: #b6e650;
-  display: inline-block; /* Needed to apply the pseudo-element and margin */
   position: relative; /* Required for positioning the pseudo-element */
-  margin-right: 15px; /* Space between links */
+  margin-left:114px; /* Space between links */
   padding-bottom: 5px; /* Space for the underline effect */
 }
 
@@ -301,7 +328,7 @@ footer {
 }
 
 .quick-links a:hover::after {
-  width: 100%; /* Full width of the link on hover */
+  width: 40%; /* Full width of the link on hover */
 }
 
 .quick-links a:last-child {
@@ -309,6 +336,7 @@ footer {
 }
 
 .quick-links h3 {
+  margin-top: auto;
   margin-left: 26%;
 }
 
@@ -317,7 +345,12 @@ footer {
 }
 
 .newsletter p {
-  margin-left: 10%;
+  margin-left: 17%;
+  width: 100%;
+}
+
+.newsletter form{
+  gap: 10px;
 }
 
 .newsletter input[type="email"] {
@@ -348,7 +381,7 @@ footer {
 .footer-bottom {
   text-align: center;
   color: #b6e650;
-  margin-top: 10%;
+  margin-top: 3%;
 }
 
 article {
@@ -527,12 +560,17 @@ article {
 }
 
 .meet {
-  padding: 8px;
+  padding: 4px;
+  border-radius: 200px;
   color: #141426;
   background-color: #b6e650;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
+.meet p{
+  padding: 0 3px;
+}
+
 .meet:hover {
   transform: scale(1.09);
   color: #b6e650;
@@ -541,11 +579,16 @@ article {
 }
 
 .pro {
-  padding: 8px;
+  padding: 4px;
+  border-radius: 200px;
   color: #b6e650;
   border: solid 2px #b6e650;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+}
+
+.pro p{
+  padding: 0 8px;
 }
 .pro a{
   text-decoration: none;
@@ -857,7 +900,7 @@ article {
 }
 
 .fec ul{
-  margin-top: 50px;
+  margin-top: 0px;
 }
 
 .fec1 li {
@@ -1022,7 +1065,7 @@ article {
 .form-group input,
 .form-group textarea {
   color: #141426;
-  width: 100%;
+  width: auto;
   padding: 10px;
   border: 1px solid #cccccc;
   border-radius: 4px;
@@ -1095,6 +1138,10 @@ article {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
+.meeti{
+  gap :20px;
+}
+
 /* Close Button Icon */
 .ic {
   position: absolute;
@@ -1116,7 +1163,7 @@ article {
 /* Form Styling */
 form {
   display: grid;
-  gap: 20px;
+  gap: 0px;
   margin: auto;
 }
 
@@ -1167,7 +1214,7 @@ form {
 /* Input and Textarea Styling */
 .form-group input,
 .form-group textarea {
-  width: 100%;
+  width: auto;
   padding: 12px;
   font-size: 14px;
   color: #1a1a2e;
@@ -1242,5 +1289,4 @@ form {
   opacity: 1 !important;
   transform: none !important;
 }
-
 
