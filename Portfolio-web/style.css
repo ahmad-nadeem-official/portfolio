@@ -694,11 +694,12 @@ article {
   font-size: 20px;
   background-color: #b6e650;
   color: #141426;
-  padding: 1%;
+  padding: 10px;
   width: 5%;
   letter-spacing: 2px;
   transform: skew(160deg, 2deg);
   text-align: center;
+  margin-left: 3%;
 }
 
 .one {
@@ -887,6 +888,7 @@ article {
 
 .fec1 {
   margin: auto;
+  margin-left: 10px;
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -900,7 +902,7 @@ article {
 }
 
 .fec ul{
-  margin-top: 0px;
+  margin-top: 56px;
 }
 
 .fec1 li {
