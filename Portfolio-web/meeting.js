@@ -1,7 +1,9 @@
 //meeting 
 let met  = document.querySelector(".meet");
+let met2  = document.querySelector(".meet-text");
 let met1 = document.querySelector(".meet01");
 let ic = document.querySelector(".ic");
+
 
 function show(){
     met1.style.visibility = 'visible';
@@ -12,6 +14,12 @@ function hide(){
 
 ic.addEventListener('click', hide)
 met.addEventListener('click', show)
+met2.addEventListener('click', show)
+
+let p1 = document.querySelector(".pro");
+p1.addEventListener('click', () => {
+    window.location.href = "contact.html";
+})
 
 window.addEventListener('click', function(event){
     if (!met1.contains(event.target) && event.target !== met) {
