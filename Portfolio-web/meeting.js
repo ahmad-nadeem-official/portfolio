@@ -30,6 +30,9 @@ window.addEventListener('scroll', hide);
 
 
 
+
+//marquee animation
+
 // document.addEventListener('DOMContentLoaded', () => {
 //     const marquee = document.getElementById('marquee');
 //     const marqueeText = document.getElementById('marqueeText');

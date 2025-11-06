@@ -264,6 +264,13 @@ footer {
   align-items: center;
 } */
 
+
+.tempo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .footer-content {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
@@ -784,10 +791,12 @@ article {
   letter-spacing: 3px;
 }
 .sec2 {
-  font-family: "Cormorant", serif;
   font-optical-sizing: auto;
   max-width: 40%;
-  font-size: 20px;
+}
+
+.sec2 p{
+  line-height: 1.4;
 }
 
 .dec {
@@ -824,6 +833,7 @@ article {
 .jec p {
   width: 60%;
   text-align: center; /* Center text inside the paragraphs */
+  line-height: 1.4;
 }
 
 .gec {
@@ -857,6 +867,10 @@ article {
   align-items: center; /* Center vertically */
 }
 
+.cec1 p {
+  line-height: 1.4;
+}
+
 .cec2 img {
   max-height: 35rem;
   justify-content: center;
@@ -882,28 +896,31 @@ article {
 }
 
 .fec {
+  display: flex;
+  justify-content: center;
+  gap: 220px;
   background-color: #b6e650;
   color: #141426;
 }
 
 .fec1 {
-  margin: auto;
-  margin-left: 10px;
   display: flex;
   justify-content: center;
   justify-items: center;
-  gap: 2%;
 }
 
 .fec1 h3 {
   font-size: 40px;
-  margin-left: 18%;
+  margin-left: 0;
   letter-spacing: 0.3px;
 }
 
 .fec ul{
   margin-top: 56px;
-}
+  margin-left: 70px;
+  visibility: hidden;
+  }
+
 
 .fec1 li {
   display: inline;
@@ -1292,3 +1309,15 @@ form {
   transform: none !important;
 }
 
+
+
+.tempo .footer-content {
+  display: flex;
+  justify-content: space-between; /* spreads evenly */
+  gap: 80px; /* tweak as needed */
+  flex-wrap: wrap; /* avoids breaking on small screens */
+}
+
+.tempo .footer-content > div {
+  flex: 1;
+}
